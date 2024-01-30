@@ -165,4 +165,23 @@ const mostExpensive = (budget, mouseArray, keyBoardArray) => {
 }
 // -------------------------------------------------------------------------------------------------------
 
-module.exports = { arrInc, roundDecimals, employeesBonus, mostExpensive };
+// module.exports = { arrInc, roundDecimals, employeesBonus, mostExpensive };
+
+
+function birthdayCakeCandles(candles) {
+  // Write your code here
+  let howMany = 0
+  let maxNum = Math.max(...candles)
+  
+  for(let candle of candles){
+    if(candle === maxNum ){
+      howMany++
+    }
+  }
+  return howMany
+  
+  
+}
+
+birthdayCakeCandles([4,4,1,3])
+
