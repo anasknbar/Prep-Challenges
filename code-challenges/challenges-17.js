@@ -16,7 +16,14 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
+    let myArray = []
+    for(let i = int1; i>0; i= i-int2){
+        myArray.push(i)
+    }
+    return myArray
 }
+
+// console.log(recursionPattern(16, 5))
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -38,11 +45,13 @@ const filterLinks = (str) => {
     const hrefRegex = /<a\s+[^>]*href="([^"]*)"[^>]*>/;
     const match = str.match(hrefRegex);
 
-    return match[1]
+    return match ? match[1] : null;
   
 
 
 }
+console.log(filterLinks(`<a href="http://www.hackerrank.com"><h1><b>HackerRank</b></h1></a>`))
+console.log(filterLinks(`<a href="http://www.something.org"><h1><b>HackerRank</b></h1></a>`))
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -61,7 +70,11 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return cleanedStr === cleanedStr.split('').reverse().join('');
+
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
