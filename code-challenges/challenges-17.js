@@ -18,14 +18,18 @@ const recursionPattern = (int1, int2) => { // I could not solve it using recursi
 
     // write your code here
     let myArray = []
+
     for(let i = int1 ; i > 0-int2 ; i=i-int2){
         myArray.push(i)
     }
     for(let i = myArray[myArray.length-2] ; i <= int1 ; i=i+int2){
+
+  
         myArray.push(i)
     }
     return myArray
 }
+
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -45,10 +49,12 @@ const recursionPattern = (int1, int2) => { // I could not solve it using recursi
 
 const filterLinks = (str) => {
     // write your code here
+
     
     let match = str.match(/(www\.[^\s]+?\.(?:com|org|net))/)
     let website = match[0]
     return(website)
+
 
     
 
@@ -72,6 +78,7 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
+
     let word = str.replace(/[^a-zA-Z]/g, "").toLowerCase()
     let reversedWord = word.split('').reverse().join('');
     return word === reversedWord
@@ -79,6 +86,9 @@ const isPalindrome = (str) => {
 }
 
 // console.log(isPalindrome("A man, a plan, a canal: Panamh"))
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
