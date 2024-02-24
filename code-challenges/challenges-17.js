@@ -14,16 +14,23 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
-const recursionPattern = (int1, int2) => {
+const recursionPattern = (int1, int2) => { // I could not solve it using recursion, it was so hard, so I tried to solve it using for loop
+
     // write your code here
     let myArray = []
-    for(let i = int1; i>0; i= i-int2){
+
+    for(let i = int1 ; i > 0-int2 ; i=i-int2){
+        myArray.push(i)
+    }
+    for(let i = myArray[myArray.length-2] ; i <= int1 ; i=i+int2){
+
+  
         myArray.push(i)
     }
     return myArray
 }
 
-// console.log(recursionPattern(16, 5))
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -42,16 +49,17 @@ const recursionPattern = (int1, int2) => {
 
 const filterLinks = (str) => {
     // write your code here
-    const hrefRegex = /<a\s+[^>]*href="([^"]*)"[^>]*>/;
-    const match = str.match(hrefRegex);
 
-    return match ? match[1] : null;
-  
+    
+    let match = str.match(/(www\.[^\s]+?\.(?:com|org|net))/)
+    let website = match[0]
+    return(website)
 
+
+    
 
 }
-console.log(filterLinks(`<a href="http://www.hackerrank.com"><h1><b>HackerRank</b></h1></a>`))
-console.log(filterLinks(`<a href="http://www.something.org"><h1><b>HackerRank</b></h1></a>`))
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -70,10 +78,16 @@ console.log(filterLinks(`<a href="http://www.something.org"><h1><b>HackerRank</b
 
 const isPalindrome = (str) => {
     // write your code here
-    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    return cleanedStr === cleanedStr.split('').reverse().join('');
 
+    let word = str.replace(/[^a-zA-Z]/g, "").toLowerCase()
+    let reversedWord = word.split('').reverse().join('');
+    return word === reversedWord
+    
 }
+
+// console.log(isPalindrome("A man, a plan, a canal: Panamh"))
+
+
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -102,4 +116,4 @@ const samePattern = (str, arr) => {
 // -------------------------------------------------------------------------------------------------------
 
 
-// module.exports = { recursionPattern, filterLinks, isPalindrome, samePattern };
+module.exports = { recursionPattern, filterLinks, isPalindrome, samePattern };
