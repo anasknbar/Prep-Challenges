@@ -17,6 +17,7 @@
 const recursionPattern = (int1, int2) => { // I could not solve it using recursion, it was so hard, so I tried to solve it using for loop
 
     // write your code here
+
     let myArray = []
 
     for(let i = int1 ; i > 0-int2 ; i=i-int2){
@@ -28,6 +29,7 @@ const recursionPattern = (int1, int2) => { // I could not solve it using recursi
         myArray.push(i)
     }
     return myArray
+
 }
 
 
@@ -85,7 +87,8 @@ const isPalindrome = (str) => {
     
 }
 
-// console.log(isPalindrome("A man, a plan, a canal: Panamh"))
+
+
 
 
 
