@@ -17,14 +17,18 @@
 const recursionPattern = (int1, int2) => { // I could not solve it using recursion, it was so hard, so I tried to solve it using for loop
 
     // write your code here
-    let myArray = []
-    for(let i = int1 ; i > 0-int2 ; i=i-int2){
-        myArray.push(i)
-    }
-    for(let i = myArray[myArray.length-2] ; i <= int1 ; i=i+int2){
-        myArray.push(i)
-    }
-    return myArray
+     // write your code here
+     let myArray = []
+
+     for(let i = int1 ; i > 0-int2 ; i=i-int2){
+         myArray.push(i)
+     }
+     for(let i = myArray[myArray.length-2] ; i <= int1 ; i=i+int2){
+ 
+   
+         myArray.push(i)
+     }
+     return myArray
 }
 
 // -------------------------------------------------------------------------------------------------------
